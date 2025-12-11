@@ -1,0 +1,15 @@
+void start_game(Game_state  *game);
+void display_board(const Game_state  *game);
+bool is_checkmate(Game_state  *game, Color color);
+bool is_stalemate(Game_state  *game, Color color);
+bool in_promotion(Game_state  *game, Color color);
+bool is_valid_move(Game_state *game, int from_row, int from_column, int to_row, int to_column);
+bool is_path_clear(Game_state *game, int from_row, int from_column, int to_row, int to_column);
+bool move_piece(Game_state *game, int from_row, int from_column, int to_row, int to_column, piece_type promotion);
+char piece_to_char(piece Piece);
+void save_game(Game_state *game);
+void load_game(Game_state *game);
+void piece_taken(const Game_state *game);  
+void redo_move(Game_state *game);
+void switch_player(Game_state *game);
+bool is_in_check(Game_state  *game, Color color); 
